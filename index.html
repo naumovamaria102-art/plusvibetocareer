@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CU Career Prototypes</title>
+  <title>CU Career Student Prototype</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -13,10 +13,11 @@
             cu: {
               ink: "#171A24",
               line: "#E7EAF1",
-              soft: "#F5F7FC",
+              soft: "#F6F8FC",
               blue: "#4F6BFF",
               lilac: "#EEF0FF",
               green: "#1BB56B",
+              rose: "#F15B68",
               amber: "#F3B541"
             }
           },
@@ -24,89 +25,759 @@
             sans: ["Manrope", "Segoe UI", "sans-serif"]
           },
           boxShadow: {
-            panel: "0 20px 50px rgba(17, 24, 39, 0.08)"
+            panel: "0 22px 60px rgba(15, 23, 42, 0.08)"
           }
         }
       }
     };
   </script>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-white via-slate-50 to-[#EEF2FF] font-sans text-cu-ink">
-  <div class="mx-auto flex min-h-screen max-w-7xl flex-col px-6 py-8 lg:px-10">
-    <header class="mb-10 flex items-center justify-between rounded-[28px] border border-cu-line bg-white/90 px-6 py-5 shadow-panel backdrop-blur">
-      <div class="flex items-center gap-4">
-        <div class="relative h-12 w-12">
-          <span class="absolute left-0 top-3 h-6 w-6 rotate-45 border-2 border-cu-ink"></span>
-          <span class="absolute right-0 top-0 h-6 w-6 rotate-45 border-2 border-cu-ink"></span>
-          <span class="absolute bottom-0 left-3 h-6 w-6 rotate-45 border-2 border-cu-ink"></span>
+<body class="min-h-screen bg-[#F7F9FD] font-sans text-cu-ink">
+  <div class="flex min-h-screen flex-col">
+    <header class="border-b border-cu-line bg-white/90 backdrop-blur">
+      <div class="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-10">
+          <a href="./index.html" class="flex items-center gap-4">
+            <div class="relative h-11 w-11">
+              <span class="absolute left-0 top-3 h-5 w-5 rotate-45 border-2 border-cu-ink"></span>
+              <span class="absolute right-0 top-0 h-5 w-5 rotate-45 border-2 border-cu-ink"></span>
+              <span class="absolute bottom-0 left-3 h-5 w-5 rotate-45 border-2 border-cu-ink"></span>
+            </div>
+            <div class="text-sm font-extrabold uppercase leading-4 tracking-wide">
+              Центральный<br>университет
+            </div>
+          </a>
+          <nav class="hidden items-center gap-3 text-[15px] lg:flex">
+            <span class="rounded-2xl px-4 py-3 text-slate-500">Мероприятия</span>
+            <span class="rounded-2xl bg-cu-lilac px-4 py-3 font-semibold text-cu-blue">Обучение</span>
+            <span class="rounded-2xl px-4 py-3 text-slate-500">Time</span>
+            <span class="rounded-2xl px-4 py-3 text-slate-500">Поддержка</span>
+            <span class="rounded-2xl px-4 py-3 text-slate-500">Хендбук студента</span>
+          </nav>
         </div>
-        <div>
-          <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Central University Hackathon</p>
-          <h1 class="text-2xl font-extrabold tracking-tight">CU Career</h1>
+        <div class="flex items-center gap-4">
+          <div class="rounded-2xl bg-cu-soft px-4 py-3 text-sm font-semibold text-slate-600">Career track</div>
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-cu-soft text-lg font-semibold">АК</div>
         </div>
-      </div>
-      <div class="rounded-full bg-cu-soft px-4 py-2 text-sm font-medium text-slate-600">
-        Desktop clickable prototype
       </div>
     </header>
 
-    <main class="grid flex-1 gap-6 lg:grid-cols-2">
-      <a href="./student.html" class="group flex flex-col justify-between rounded-[32px] border border-cu-line bg-white p-8 shadow-panel transition duration-200 hover:-translate-y-1 hover:border-cu-blue">
-        <div>
-          <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-cu-lilac text-cu-blue">
-            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M12 3v18"></path>
-              <path d="M6 8h12"></path>
-              <path d="M8 21h8"></path>
-              <path d="M9 3h6"></path>
-            </svg>
-          </div>
-          <p class="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-cu-blue">Student side</p>
-          <h2 class="mb-3 text-4xl font-extrabold tracking-tight">Прототип для студента</h2>
-          <p class="max-w-xl text-lg leading-8 text-slate-600">
-            Прозрачный путь от заявки до релевантных вакансий: заявка, резюме, assessment, приоритеты по вакансиям и статусы.
-          </p>
+    <div class="mx-auto flex w-full max-w-[1600px] flex-1">
+      <aside class="hidden w-[280px] border-r border-cu-line bg-white/70 px-5 py-8 lg:block">
+        <div class="mb-8 rounded-[28px] bg-gradient-to-br from-cu-lilac to-white p-5">
+          <p class="text-sm font-semibold text-cu-blue">CU Career</p>
+          <h2 class="mt-2 text-2xl font-extrabold tracking-tight">Путь студента</h2>
+          <p class="mt-2 text-sm leading-6 text-slate-500">От заявки до релевантных вакансий и отправки резюме партнерам.</p>
         </div>
-        <div class="mt-10 flex items-center justify-between">
-          <div class="flex gap-3 text-sm text-slate-500">
-            <span class="rounded-full bg-cu-soft px-3 py-1">6 экранов</span>
-            <span class="rounded-full bg-cu-soft px-3 py-1">CU style</span>
-            <span class="rounded-full bg-cu-soft px-3 py-1">Tailwind</span>
-          </div>
-          <span class="rounded-full bg-cu-blue px-5 py-3 text-sm font-semibold text-white transition group-hover:bg-[#3F59E8]">
-            Открыть
-          </span>
+        <nav id="studentNav" class="space-y-2"></nav>
+        <div class="mt-8 rounded-[24px] border border-cu-line bg-white p-4">
+          <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Подсказка</p>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Прототип кликабельный: основные CTA переводят между экранами и меняют демо-статусы.</p>
         </div>
-      </a>
+      </aside>
 
-      <a href="./manager.html" class="group flex flex-col justify-between rounded-[32px] border border-cu-line bg-white p-8 shadow-panel transition duration-200 hover:-translate-y-1 hover:border-cu-blue">
-        <div>
-          <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#EAFBF2] text-cu-green">
-            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="3" y="4" width="18" height="16" rx="3"></rect>
-              <path d="M8 9h8"></path>
-              <path d="M8 13h5"></path>
-              <path d="M17 17h.01"></path>
-            </svg>
-          </div>
-          <p class="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-cu-green">Manager side</p>
-          <h2 class="mb-3 text-4xl font-extrabold tracking-tight">Прототип для менеджера</h2>
-          <p class="max-w-xl text-lg leading-8 text-slate-600">
-            Операционный кабинет ЦПК: дашборд, очередь студентов, карточка кейса, assessment, подбор вакансий и контроль статусов.
-          </p>
-        </div>
-        <div class="mt-10 flex items-center justify-between">
-          <div class="flex gap-3 text-sm text-slate-500">
-            <span class="rounded-full bg-cu-soft px-3 py-1">5 экранов</span>
-            <span class="rounded-full bg-cu-soft px-3 py-1">SLA & KPI</span>
-            <span class="rounded-full bg-cu-soft px-3 py-1">Clickable</span>
-          </div>
-          <span class="rounded-full bg-cu-ink px-5 py-3 text-sm font-semibold text-white transition group-hover:bg-slate-800">
-            Открыть
-          </span>
-        </div>
-      </a>
-    </main>
+      <main class="min-w-0 flex-1 px-5 py-6 lg:px-10 lg:py-9">
+        <div id="toast" class="pointer-events-none fixed bottom-6 right-6 z-50 hidden rounded-2xl bg-cu-ink px-5 py-4 text-sm font-medium text-white shadow-panel"></div>
+        <div id="studentContent"></div>
+      </main>
+    </div>
   </div>
+
+  <script>
+    const studentState = {
+      view: "journey",
+      application: {
+        fullName: "Анна Кузнецова",
+        course: "3 курс",
+        program: "Машинное обучение",
+        track: "Стажировка",
+        grade: "Intern / Junior",
+        spheres: "Аналитика, ML Product, Data Science",
+        expectations: "Хочу выйти на стажировку в продуктовую или финтех-команду с сильным наставничеством.",
+        submitted: true
+      },
+      resume: {
+        status: "В работе",
+        fileName: "",
+        consultSlot: "",
+        note: "Загрузите резюме или выберите слот консультации, чтобы менеджер получил заявку в работу."
+      },
+      calendar: {
+        selectedSlot: ""
+      },
+      assessment: {
+        status: "Ожидает записи",
+        slot: "",
+        grade: "Не определен",
+        feedback: "После прохождения здесь появится обратная связь от ассесора и рекомендации по следующему шагу."
+      },
+      vacancies: [
+        {
+          id: 1,
+          company: "Т-Банк",
+          role: "Product Analyst Intern",
+          why: "Сильное совпадение по аналитике, SQL и продуктовому треку.",
+          status: "Подобрана",
+          priority: null
+        },
+        {
+          id: 2,
+          company: "Яндекс",
+          role: "ML Product Intern",
+          why: "Совпадает с интересом к ML Product и карьерным ожиданиям.",
+          status: "Подобрана",
+          priority: null
+        },
+        {
+          id: 3,
+          company: "Авито",
+          role: "Data Analyst Intern",
+          why: "Подходит по уровню и даёт быстрый вход в аналитику.",
+          status: "Подобрана",
+          priority: null
+        }
+      ]
+    };
+
+    const studentMenu = [
+      { id: "journey", label: "Путь студента", icon: "path" },
+      { id: "application", label: "Заявка", icon: "form" },
+      { id: "resume", label: "Резюме", icon: "resume" },
+      { id: "calendar", label: "Календарь", icon: "calendar" },
+      { id: "assessment", label: "Assessment", icon: "assessment" },
+      { id: "vacancies", label: "Вакансии", icon: "bag" }
+    ];
+
+    function studentBadge(text, tone = "neutral") {
+      const tones = {
+        neutral: "bg-cu-soft text-slate-600",
+        blue: "bg-cu-lilac text-cu-blue",
+        green: "bg-[#EAFBF2] text-cu-green",
+        amber: "bg-[#FFF4D9] text-[#A36500]"
+      };
+      return `<span class="rounded-full px-3 py-1 text-xs font-semibold ${tones[tone]}">${text}</span>`;
+    }
+
+    function studentStep(index, title, subtitle, active, done) {
+      const circle = done
+        ? `<div class="flex h-14 w-14 items-center justify-center rounded-full border border-[#AEE6C8] bg-[#EAFBF2] text-cu-green">
+             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+               <path d="m5 13 4 4L19 7"></path>
+             </svg>
+           </div>`
+        : `<div class="flex h-14 w-14 items-center justify-center rounded-full ${active ? "bg-cu-blue text-white shadow-lg shadow-blue-100" : "bg-slate-100 text-slate-500"} text-lg font-bold">${index}</div>`;
+      return `
+        <div class="flex min-w-[180px] items-center gap-4">
+          ${circle}
+          <div>
+            <div class="text-lg font-bold">${title}</div>
+            <div class="text-sm text-slate-500">${subtitle}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function studentJourneyView() {
+      const resumeMeta = studentState.resume.fileName
+        ? `Актуальное резюме: ${studentState.resume.fileName}`
+        : studentState.resume.consultSlot
+          ? `Консультация: ${studentState.resume.consultSlot}`
+          : "Нужно выбрать сценарий: загрузка или консультация";
+
+      return `
+        <div class="space-y-6">
+          <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+            <div class="flex flex-col gap-8 xl:flex-row xl:items-center xl:justify-between">
+              <div>
+                <div class="mb-3 text-sm font-medium text-slate-500">Обучение  /  Карьера</div>
+                <h1 class="text-5xl font-extrabold tracking-tight">Путь студента</h1>
+                <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-600">Прозрачный маршрут к стажировке или работе: что уже готово, что делать дальше и на каком этапе сейчас находится ваша заявка.</p>
+              </div>
+              <div class="rounded-[28px] bg-gradient-to-br from-cu-lilac to-white p-5">
+                <p class="text-sm font-semibold text-cu-blue">Следующий шаг</p>
+                <p class="mt-2 text-2xl font-extrabold">Резюме</p>
+                <p class="mt-2 max-w-sm text-sm leading-6 text-slate-600">${studentState.resume.note}</p>
+                <button data-route="resume" class="mt-4 rounded-2xl bg-cu-blue px-5 py-3 text-sm font-semibold text-white">Продолжить</button>
+              </div>
+            </div>
+
+            <div class="mt-10 flex flex-col gap-6 overflow-x-auto pb-2 xl:flex-row xl:items-center">
+              ${studentStep(1, "Заявка", studentState.application.submitted ? "Пройдено" : "Черновик", false, studentState.application.submitted)}
+              <div class="hidden h-px flex-1 border-t border-dashed border-cu-line xl:block"></div>
+              ${studentStep(2, "Резюме", studentState.resume.status, studentState.view === "resume", false)}
+              <div class="hidden h-px flex-1 border-t border-dashed border-cu-line xl:block"></div>
+              ${studentStep(3, "Assessment", studentState.assessment.status, false, false)}
+              <div class="hidden h-px flex-1 border-t border-dashed border-cu-line xl:block"></div>
+              ${studentStep(4, "Вакансии", "Ожидает", false, false)}
+            </div>
+          </div>
+
+          <div class="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
+            <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-semibold text-cu-blue">Текущий статус</p>
+                  <h2 class="mt-2 text-3xl font-extrabold">Резюме в работе</h2>
+                </div>
+                ${studentBadge(studentState.resume.status, "blue")}
+              </div>
+              <div class="mt-6 grid gap-4 md:grid-cols-3">
+                <div class="rounded-[24px] bg-cu-soft p-5">
+                  <div class="text-sm text-slate-500">Направление</div>
+                  <div class="mt-2 text-lg font-bold">${studentState.application.program}</div>
+                </div>
+                <div class="rounded-[24px] bg-cu-soft p-5">
+                  <div class="text-sm text-slate-500">Формат</div>
+                  <div class="mt-2 text-lg font-bold">${studentState.application.track}</div>
+                </div>
+                <div class="rounded-[24px] bg-cu-soft p-5">
+                  <div class="text-sm text-slate-500">Желаемый грейд</div>
+                  <div class="mt-2 text-lg font-bold">${studentState.application.grade}</div>
+                </div>
+              </div>
+              <div class="mt-6 rounded-[24px] border border-cu-line p-5">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <div class="text-sm text-slate-500">Что происходит сейчас</div>
+                    <div class="mt-2 text-lg font-bold">${resumeMeta}</div>
+                  </div>
+                  <button data-route="resume" class="rounded-2xl border border-cu-blue px-4 py-3 text-sm font-semibold text-cu-blue">Открыть этап</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+                <p class="text-sm font-semibold text-cu-blue">Карьерные ожидания</p>
+                <h2 class="mt-2 text-2xl font-extrabold">Мои цели</h2>
+                <div class="mt-5 space-y-4 text-sm leading-7 text-slate-600">
+                  <p><span class="font-semibold text-cu-ink">Сферы:</span> ${studentState.application.spheres}</p>
+                  <p><span class="font-semibold text-cu-ink">Комментарий:</span> ${studentState.application.expectations}</p>
+                </div>
+                <button data-route="application" class="mt-6 rounded-2xl border border-cu-line px-4 py-3 text-sm font-semibold text-slate-700">Редактировать заявку</button>
+              </div>
+
+              <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-sm font-semibold text-cu-blue">Напоминание</p>
+                    <h2 class="mt-2 text-2xl font-extrabold">Assessment</h2>
+                  </div>
+                  ${studentBadge(studentState.assessment.status, "amber")}
+                </div>
+                <p class="mt-4 text-sm leading-7 text-slate-600">После этапа резюме выберите удобное время для assessment. Здесь же позже появится обратная связь от ассесора и установленный грейд.</p>
+                <button data-route="assessment" class="mt-6 rounded-2xl bg-cu-ink px-5 py-3 text-sm font-semibold text-white">Смотреть этап</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function studentApplicationView() {
+      return `
+        <div class="space-y-6">
+          <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+            <div class="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
+              <div>
+                <div class="text-sm font-medium text-slate-500">Путь студента / Заявка</div>
+                <h1 class="mt-2 text-4xl font-extrabold tracking-tight">Карьерная заявка</h1>
+                <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-600">Первый шаг, чтобы менеджер понял ваш контекст, ожидания и подобрал релевантный карьерный маршрут.</p>
+              </div>
+              ${studentBadge(studentState.application.submitted ? "Заявка отправлена" : "Черновик", studentState.application.submitted ? "green" : "neutral")}
+            </div>
+          </div>
+
+          <form id="applicationForm" class="grid gap-6 xl:grid-cols-2">
+            <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+              <h2 class="text-2xl font-extrabold">Личная информация</h2>
+              <div class="mt-6 grid gap-5">
+                <label class="grid gap-2 text-sm font-semibold">
+                  ФИО
+                  <input name="fullName" value="${studentState.application.fullName}" class="rounded-2xl border border-cu-line px-4 py-4 text-base font-medium outline-none transition focus:border-cu-blue" />
+                </label>
+                <div class="grid gap-5 md:grid-cols-2">
+                  <label class="grid gap-2 text-sm font-semibold">
+                    Курс
+                    <input name="course" value="${studentState.application.course}" class="rounded-2xl border border-cu-line px-4 py-4 text-base font-medium outline-none transition focus:border-cu-blue" />
+                  </label>
+                  <label class="grid gap-2 text-sm font-semibold">
+                    Программа
+                    <input name="program" value="${studentState.application.program}" class="rounded-2xl border border-cu-line px-4 py-4 text-base font-medium outline-none transition focus:border-cu-blue" />
+                  </label>
+                </div>
+                <div>
+                  <div class="mb-3 text-sm font-semibold">Что ищу сейчас</div>
+                  <div class="grid gap-3 md:grid-cols-2">
+                    <button type="button" data-track="Стажировка" class="track-btn rounded-[24px] border px-5 py-4 text-left ${studentState.application.track === "Стажировка" ? "border-cu-blue bg-cu-lilac text-cu-blue" : "border-cu-line bg-white text-slate-600"}">
+                      <div class="font-bold">Стажировка</div>
+                      <div class="mt-1 text-sm">Быстрый вход в компанию с карьерным сопровождением.</div>
+                    </button>
+                    <button type="button" data-track="Работа" class="track-btn rounded-[24px] border px-5 py-4 text-left ${studentState.application.track === "Работа" ? "border-cu-blue bg-cu-lilac text-cu-blue" : "border-cu-line bg-white text-slate-600"}">
+                      <div class="font-bold">Работа</div>
+                      <div class="mt-1 text-sm">Позиции для более зрелого входа после assessment.</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+              <h2 class="text-2xl font-extrabold">Карьерные ожидания</h2>
+              <div class="mt-6 grid gap-5">
+                <label class="grid gap-2 text-sm font-semibold">
+                  На какой грейд ориентируюсь
+                  <input name="grade" value="${studentState.application.grade}" class="rounded-2xl border border-cu-line px-4 py-4 text-base font-medium outline-none transition focus:border-cu-blue" />
+                </label>
+                <label class="grid gap-2 text-sm font-semibold">
+                  Интересующие сферы
+                  <input name="spheres" value="${studentState.application.spheres}" class="rounded-2xl border border-cu-line px-4 py-4 text-base font-medium outline-none transition focus:border-cu-blue" />
+                </label>
+                <label class="grid gap-2 text-sm font-semibold">
+                  Что важно в следующем шаге
+                  <textarea name="expectations" rows="6" class="rounded-[24px] border border-cu-line px-4 py-4 text-base font-medium outline-none transition focus:border-cu-blue">${studentState.application.expectations}</textarea>
+                </label>
+              </div>
+
+              <div class="mt-8 flex flex-wrap gap-3">
+                <button type="button" data-action="save-application" class="rounded-2xl border border-cu-line px-5 py-3 text-sm font-semibold text-slate-700">Сохранить черновик</button>
+                <button type="button" data-action="submit-application" class="rounded-2xl bg-cu-blue px-5 py-3 text-sm font-semibold text-white">Отправить заявку</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      `;
+    }
+
+    function studentResumeView() {
+      return `
+        <div class="space-y-6">
+          <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+            <div class="flex flex-col gap-5 xl:flex-row xl:items-center xl:justify-between">
+              <div>
+                <div class="text-sm font-medium text-slate-500">Путь студента / Резюме</div>
+                <h1 class="mt-2 text-4xl font-extrabold tracking-tight">Резюме</h1>
+                <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-600">Загрузите готовое резюме или запишитесь на карьерную консультацию. В обоих случаях запрос отправляется менеджеру в работу.</p>
+              </div>
+              ${studentBadge(studentState.resume.status, "blue")}
+            </div>
+
+            <div class="mt-8 flex flex-col gap-6 overflow-x-auto pb-2 xl:flex-row xl:items-center">
+              ${studentStep(1, "Заявка", "Пройдено", false, true)}
+              <div class="hidden h-px flex-1 border-t border-dashed border-cu-line xl:block"></div>
+              ${studentStep(2, "Резюме", studentState.resume.status, true, false)}
+              <div class="hidden h-px flex-1 border-t border-dashed border-cu-line xl:block"></div>
+              ${studentStep(3, "Assessment", "Ожидает", false, false)}
+              <div class="hidden h-px flex-1 border-t border-dashed border-cu-line xl:block"></div>
+              ${studentStep(4, "Вакансии", "Ожидает", false, false)}
+            </div>
+          </div>
+
+          <div class="grid gap-6 xl:grid-cols-2">
+            <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+              <div class="flex h-16 w-16 items-center justify-center rounded-[24px] bg-cu-lilac text-cu-blue">
+                <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 16V4"></path>
+                  <path d="m7 9 5-5 5 5"></path>
+                  <path d="M5 20h14"></path>
+                </svg>
+              </div>
+              <h2 class="mt-6 text-3xl font-extrabold">Загрузить резюме</h2>
+              <p class="mt-3 text-sm leading-7 text-slate-600">PDF, DOCX или TXT. После загрузки резюме попадет на проверку менеджеру.</p>
+              <div class="mt-5 rounded-[24px] bg-cu-soft p-5">
+                <div class="text-sm text-slate-500">Текущий файл</div>
+                <div class="mt-2 text-lg font-bold">${studentState.resume.fileName || "Файл пока не загружен"}</div>
+              </div>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <button data-action="upload-resume" class="rounded-2xl border border-cu-blue px-5 py-3 text-sm font-semibold text-cu-blue">Загрузить</button>
+                <button data-route="assessment" class="rounded-2xl border border-cu-line px-5 py-3 text-sm font-semibold text-slate-700">Следующий этап</button>
+              </div>
+            </div>
+
+            <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+              <div class="flex h-16 w-16 items-center justify-center rounded-[24px] bg-cu-lilac text-cu-blue">
+                <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="4" width="18" height="17" rx="3"></rect>
+                  <path d="M16 2v4"></path>
+                  <path d="M8 2v4"></path>
+                  <path d="M3 10h18"></path>
+                </svg>
+              </div>
+              <h2 class="mt-6 text-3xl font-extrabold">Создать с консультантом</h2>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Если резюме пока нет или хочется доработать его вместе с карьерным консультантом, выберите удобное время консультации.</p>
+              <div class="mt-5 rounded-[24px] bg-cu-soft p-5">
+                <div class="text-sm text-slate-500">Выбранный слот</div>
+                <div class="mt-2 text-lg font-bold">${studentState.resume.consultSlot || "Слот пока не выбран"}</div>
+              </div>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <button data-route="calendar" class="rounded-2xl bg-cu-blue px-5 py-3 text-sm font-semibold text-white">Выбрать время</button>
+                <button data-action="send-request" class="rounded-2xl border border-cu-line px-5 py-3 text-sm font-semibold text-slate-700">Отправить запрос</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-[28px] bg-gradient-to-r from-cu-lilac to-white px-6 py-5 text-sm leading-7 text-slate-700">
+            <span class="font-semibold text-cu-blue">Важно:</span> даже если резюме еще не готово, запрос на помощь все равно нужно отправить, чтобы менеджер увидел вашу заявку и сопровождал следующий шаг.
+          </div>
+        </div>
+      `;
+    }
+
+    function studentCalendarView() {
+      const slots = [
+        "Пн, 28 апреля · 17:00",
+        "Вт, 29 апреля · 11:30",
+        "Ср, 30 апреля · 16:00",
+        "Чт, 1 мая · 13:00",
+        "Пт, 2 мая · 18:30"
+      ];
+
+      return `
+        <div class="space-y-6">
+          <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+            <div class="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
+              <div>
+                <div class="text-sm font-medium text-slate-500">Путь студента / Календарь</div>
+                <h1 class="mt-2 text-4xl font-extrabold tracking-tight">Выбор времени консультации</h1>
+                <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-600">Экран спроектирован под будущую интеграцию с Яндекс Календарем и LMS: здесь студент видит свободные слоты и подтверждает запись.</p>
+              </div>
+              ${studentBadge("Интеграция Yandex Calendar + LMS", "neutral")}
+            </div>
+          </div>
+
+          <div class="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+            <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+              <div class="grid gap-4 md:grid-cols-2">
+                ${slots.map(slot => `
+                  <button data-slot="${slot}" class="slot-btn rounded-[24px] border px-5 py-5 text-left transition ${studentState.calendar.selectedSlot === slot ? "border-cu-blue bg-cu-lilac" : "border-cu-line bg-white hover:border-cu-blue"}">
+                    <div class="text-sm text-slate-500">Карьерная консультация</div>
+                    <div class="mt-2 text-lg font-bold">${slot}</div>
+                    <div class="mt-1 text-sm text-slate-500">45 минут, online</div>
+                  </button>
+                `).join("")}
+              </div>
+            </div>
+
+            <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+              <p class="text-sm font-semibold text-cu-blue">Выбранный слот</p>
+              <h2 class="mt-2 text-2xl font-extrabold">${studentState.calendar.selectedSlot || "Слот пока не выбран"}</h2>
+              <p class="mt-4 text-sm leading-7 text-slate-600">Кнопка подтверждения активируется только после выбора времени. Это отражает логику будущей интеграции.</p>
+              <div class="mt-8 flex flex-wrap gap-3">
+                <button data-action="confirm-slot" class="rounded-2xl ${studentState.calendar.selectedSlot ? "bg-cu-blue text-white" : "cursor-not-allowed bg-slate-200 text-slate-500"} px-5 py-3 text-sm font-semibold">Подтвердить слот</button>
+                <button data-route="resume" class="rounded-2xl border border-cu-line px-5 py-3 text-sm font-semibold text-slate-700">Назад</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function studentAssessmentView() {
+      const slots = ["6 мая · 16:00", "7 мая · 12:00", "8 мая · 18:00"];
+      return `
+        <div class="space-y-6">
+          <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+            <div class="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
+              <div>
+                <div class="text-sm font-medium text-slate-500">Путь студента / Assessment</div>
+                <h1 class="mt-2 text-4xl font-extrabold tracking-tight">Assessment</h1>
+                <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-600">Обязательный этап для всех студентов: запись на интервью, прохождение, фиксация грейда и структурная обратная связь.</p>
+              </div>
+              ${studentBadge(studentState.assessment.status, "amber")}
+            </div>
+          </div>
+
+          <div class="grid gap-6 xl:grid-cols-[1fr_1fr]">
+            <div class="space-y-6">
+              <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+                <p class="text-sm font-semibold text-cu-blue">Запись на assessment</p>
+                <div class="mt-5 grid gap-4">
+                  ${slots.map(slot => `
+                    <button data-assessment-slot="${slot}" class="rounded-[24px] border px-5 py-5 text-left transition ${studentState.assessment.slot === slot ? "border-cu-blue bg-cu-lilac" : "border-cu-line bg-white hover:border-cu-blue"}">
+                      <div class="text-sm text-slate-500">Собеседование</div>
+                      <div class="mt-2 text-lg font-bold">${slot}</div>
+                    </button>
+                  `).join("")}
+                </div>
+                <div class="mt-6 flex flex-wrap gap-3">
+                  <button data-action="confirm-assessment" class="rounded-2xl bg-cu-blue px-5 py-3 text-sm font-semibold text-white">Подтвердить время</button>
+                  <button data-action="complete-assessment" class="rounded-2xl border border-cu-line px-5 py-3 text-sm font-semibold text-slate-700">Показать результат</button>
+                </div>
+              </div>
+
+              <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+                <p class="text-sm font-semibold text-cu-blue">Материалы подготовки</p>
+                <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+                  <li class="rounded-[22px] bg-cu-soft px-4 py-3">Как проходит assessment и что оценивается</li>
+                  <li class="rounded-[22px] bg-cu-soft px-4 py-3">Гайд по подготовке к интервью</li>
+                  <li class="rounded-[22px] bg-cu-soft px-4 py-3">Примеры вопросов по хард-скиллам</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+                <p class="text-sm font-semibold text-cu-blue">Текущий результат</p>
+                <h2 class="mt-2 text-3xl font-extrabold">${studentState.assessment.grade}</h2>
+                <p class="mt-4 text-sm leading-7 text-slate-600">Выбранный слот: ${studentState.assessment.slot || "пока не назначен"}</p>
+                <div class="mt-6 rounded-[24px] bg-cu-soft p-5">
+                  <div class="text-sm text-slate-500">Статус этапа</div>
+                  <div class="mt-2 text-lg font-bold">${studentState.assessment.status}</div>
+                </div>
+              </div>
+
+              <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+                <p class="text-sm font-semibold text-cu-blue">Обратная связь от ассесора</p>
+                <p class="mt-4 text-sm leading-7 text-slate-600">${studentState.assessment.feedback}</p>
+                <button data-route="vacancies" class="mt-6 rounded-2xl bg-cu-ink px-5 py-3 text-sm font-semibold text-white">Перейти к вакансиям</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function studentVacanciesView() {
+      return `
+        <div class="space-y-6">
+          <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+            <div class="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
+              <div>
+                <div class="text-sm font-medium text-slate-500">Путь студента / Вакансии</div>
+                <h1 class="mt-2 text-4xl font-extrabold tracking-tight">Релевантные вакансии</h1>
+                <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-600">Менеджер покажет вам релевантные роли, а вы сможете выстроить приоритеты. Именно этот приоритет менеджер увидит при отправке резюме партнерам.</p>
+              </div>
+              ${studentBadge("Приоритеты важны для менеджера", "blue")}
+            </div>
+          </div>
+
+          <div class="grid gap-6">
+            ${studentState.vacancies.map(vacancy => `
+              <div class="rounded-[32px] border border-cu-line bg-white p-8 shadow-panel">
+                <div class="flex flex-col gap-6 xl:flex-row xl:items-start xl:justify-between">
+                  <div class="max-w-3xl">
+                    <div class="flex flex-wrap items-center gap-3">
+                      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">${vacancy.company}</p>
+                      ${studentBadge(vacancy.status, "neutral")}
+                    </div>
+                    <h2 class="mt-3 text-3xl font-extrabold">${vacancy.role}</h2>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">${vacancy.why}</p>
+                  </div>
+                  <div class="min-w-[280px] rounded-[24px] bg-cu-soft p-5">
+                    <div class="text-sm text-slate-500">Ваш приоритет</div>
+                    <div class="mt-2 text-2xl font-extrabold">${vacancy.priority ? `#${vacancy.priority}` : "Не выбран"}</div>
+                    <div class="mt-4 flex gap-2">
+                      <button data-priority="${vacancy.id}:1" class="rounded-xl border border-cu-line px-3 py-2 text-sm font-semibold">1</button>
+                      <button data-priority="${vacancy.id}:2" class="rounded-xl border border-cu-line px-3 py-2 text-sm font-semibold">2</button>
+                      <button data-priority="${vacancy.id}:3" class="rounded-xl border border-cu-line px-3 py-2 text-sm font-semibold">3</button>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                      <button data-action="skip-vacancy" data-id="${vacancy.id}" class="rounded-xl border border-cu-line px-3 py-2 text-sm font-semibold text-slate-700">Неинтересно</button>
+                      <button data-action="confirm-priority" data-id="${vacancy.id}" class="rounded-xl bg-cu-blue px-3 py-2 text-sm font-semibold text-white">Подтвердить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderStudentNav() {
+      const nav = document.getElementById("studentNav");
+      nav.innerHTML = studentMenu.map(item => `
+        <button data-route="${item.id}" class="flex w-full items-center gap-4 rounded-[22px] px-4 py-4 text-left transition ${studentState.view === item.id ? "bg-cu-lilac text-cu-blue" : "text-slate-600 hover:bg-cu-soft"}">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl ${studentState.view === item.id ? "bg-white text-cu-blue" : "bg-cu-soft text-slate-500"}">${studentIcon(item.icon)}</span>
+          <span class="text-sm font-semibold">${item.label}</span>
+        </button>
+      `).join("");
+    }
+
+    function studentIcon(type) {
+      const icons = {
+        path: "◎",
+        form: "□",
+        resume: "↥",
+        calendar: "◫",
+        assessment: "◌",
+        bag: "▣"
+      };
+      return icons[type] || "•";
+    }
+
+    function renderStudentView() {
+      const content = document.getElementById("studentContent");
+      const views = {
+        journey: studentJourneyView,
+        application: studentApplicationView,
+        resume: studentResumeView,
+        calendar: studentCalendarView,
+        assessment: studentAssessmentView,
+        vacancies: studentVacanciesView
+      };
+      content.innerHTML = views[studentState.view]();
+      renderStudentNav();
+    }
+
+    function studentToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.remove("hidden");
+      clearTimeout(studentToast.timer);
+      studentToast.timer = setTimeout(() => toast.classList.add("hidden"), 2200);
+    }
+
+    function readApplicationForm() {
+      const form = document.getElementById("applicationForm");
+      if (!form) return;
+      const formData = new FormData(form);
+      studentState.application.fullName = formData.get("fullName");
+      studentState.application.course = formData.get("course");
+      studentState.application.program = formData.get("program");
+      studentState.application.grade = formData.get("grade");
+      studentState.application.spheres = formData.get("spheres");
+      studentState.application.expectations = formData.get("expectations");
+    }
+
+    document.addEventListener("click", event => {
+      const routeButton = event.target.closest("[data-route]");
+      if (routeButton) {
+        studentState.view = routeButton.dataset.route;
+        renderStudentView();
+        return;
+      }
+
+      const trackButton = event.target.closest("[data-track]");
+      if (trackButton) {
+        studentState.application.track = trackButton.dataset.track;
+        renderStudentView();
+        return;
+      }
+
+      const slotButton = event.target.closest("[data-slot]");
+      if (slotButton) {
+        studentState.calendar.selectedSlot = slotButton.dataset.slot;
+        renderStudentView();
+        return;
+      }
+
+      const assessmentSlotButton = event.target.closest("[data-assessment-slot]");
+      if (assessmentSlotButton) {
+        studentState.assessment.slot = assessmentSlotButton.dataset.assessmentSlot;
+        renderStudentView();
+        return;
+      }
+
+      const priorityButton = event.target.closest("[data-priority]");
+      if (priorityButton) {
+        const [id, priority] = priorityButton.dataset.priority.split(":");
+        const vacancy = studentState.vacancies.find(item => item.id === Number(id));
+        if (vacancy) {
+          vacancy.priority = Number(priority);
+          studentToast(`Для ${vacancy.company} выбран приоритет #${priority}`);
+          renderStudentView();
+        }
+        return;
+      }
+
+      const actionButton = event.target.closest("[data-action]");
+      if (!actionButton) return;
+
+      const action = actionButton.dataset.action;
+
+      if (action === "save-application") {
+        readApplicationForm();
+        studentToast("Черновик заявки сохранен");
+        return;
+      }
+
+      if (action === "submit-application") {
+        readApplicationForm();
+        studentState.application.submitted = true;
+        studentState.view = "resume";
+        studentToast("Заявка отправлена");
+        renderStudentView();
+        return;
+      }
+
+      if (action === "upload-resume") {
+        studentState.resume.fileName = "Resume_Anna_Kuznetsova.pdf";
+        studentState.resume.status = "На проверке";
+        studentState.resume.note = "Резюме загружено. Менеджер увидит его в рабочем кабинете и переведет этап дальше.";
+        studentToast("Резюме загружено в систему");
+        renderStudentView();
+        return;
+      }
+
+      if (action === "send-request") {
+        if (!studentState.resume.consultSlot) {
+          studentToast("Сначала выберите слот консультации");
+          return;
+        }
+        studentState.resume.status = "Консультация назначена";
+        studentState.resume.note = "Запрос отправлен. Слот закреплен за вами и синхронизируется через календарную интеграцию.";
+        studentToast("Запрос на консультацию отправлен");
+        renderStudentView();
+        return;
+      }
+
+      if (action === "confirm-slot") {
+        if (!studentState.calendar.selectedSlot) {
+          studentToast("Сначала выберите время");
+          return;
+        }
+        studentState.resume.consultSlot = studentState.calendar.selectedSlot;
+        studentState.resume.status = "Консультация назначена";
+        studentState.resume.note = "Консультация назначена. После встречи вы сможете загрузить обновленное резюме.";
+        studentState.view = "resume";
+        studentToast("Слот консультации подтвержден");
+        renderStudentView();
+        return;
+      }
+
+      if (action === "confirm-assessment") {
+        if (!studentState.assessment.slot) {
+          studentToast("Выберите время assessment");
+          return;
+        }
+        studentState.assessment.status = "Запланирован";
+        studentToast("Assessment запланирован");
+        renderStudentView();
+        return;
+      }
+
+      if (action === "complete-assessment") {
+        studentState.assessment.status = "Завершен";
+        studentState.assessment.grade = "Junior";
+        studentState.assessment.feedback = "Сильная база по аналитике и структурное мышление. Ассесор рекомендует усилить кейсы по приоритизации и практику SQL перед интервью у партнера.";
+        studentToast("Результат assessment обновлен");
+        renderStudentView();
+        return;
+      }
+
+      if (action === "skip-vacancy") {
+        const vacancy = studentState.vacancies.find(item => item.id === Number(actionButton.dataset.id));
+        if (vacancy) {
+          vacancy.status = "Неинтересно";
+          vacancy.priority = null;
+          studentToast(`Вакансия ${vacancy.company} скрыта`);
+          renderStudentView();
+        }
+        return;
+      }
+
+      if (action === "confirm-priority") {
+        const vacancy = studentState.vacancies.find(item => item.id === Number(actionButton.dataset.id));
+        if (vacancy) {
+          vacancy.status = vacancy.priority ? "Приоритет подтвержден" : vacancy.status;
+          studentToast(vacancy.priority ? "Приоритет сохранен для менеджера" : "Сначала выберите приоритет");
+          renderStudentView();
+        }
+      }
+    });
+
+    renderStudentView();
+  </script>
 </body>
 </html>
